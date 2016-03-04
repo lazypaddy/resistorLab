@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Resistor Calculator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title">Settings</string>
+    <string name="band01">1st</string>
+    <string name="band02">2nd</string>
+    <string name="multi">Multiplier</string>
+    <string name="tolerance">Tolerance</string>
+    <string name="lblToleance">Resistor Value</string>
+    <string name="lblResult">final</string>
+    <string name="lblResultToler">final</string>
+
+
+</resources>
