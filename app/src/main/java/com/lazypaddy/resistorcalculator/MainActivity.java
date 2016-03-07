@@ -215,14 +215,22 @@ public class MainActivity extends ActionBarActivity {
     public String resistanceCommonValues (double resistance) {
         int[] barriers = {1, 1000, 1000000, Integer.MAX_VALUE};
         String[] text = {"Ohm", "kOhm", "MOhm"};
+        String[] multiplier = {".", "k", "M"};
+
+        String commonResistance;
 
             String toReturn = "";
             for (int i = 1; i < barriers.length; i++) {
                 if (resistance < barriers[i]){
                     float amount = (float)(resistance/barriers[i-1]);
-                    toReturn = " (" + (amount) + " " + text[i-1];
+                    commonResistance = Float.toString(amount) ;
+                    toReturn = " (" + commonResistance + " " + text[i-1];
                     if (amount > 1){
                         toReturn += "s";
+                    }
+                    if (i>1) {
+                        commonResistance = commonResistance.replace(".", multiplier[i - 1]);
+                        toReturn += " or " + commonResistance + " Ohms";
                     }
                     toReturn += ")";
 
