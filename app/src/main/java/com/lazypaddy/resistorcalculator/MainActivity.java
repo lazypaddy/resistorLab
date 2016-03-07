@@ -229,7 +229,12 @@ public class MainActivity extends ActionBarActivity {
                         toReturn += "s";
                     }
                     if (i>1) {
-                        commonResistance = commonResistance.replace(".", multiplier[i - 1]);
+                        if (amount == (int) amount){
+                            commonResistance =  commonResistance.replace(".0", multiplier[i - 1]);
+                        } else{
+                            commonResistance = commonResistance.replace(".", multiplier[i - 1]);
+                        }
+
                         toReturn += " or " + commonResistance + " Ohms";
                     }
                     toReturn += ")";
